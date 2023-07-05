@@ -19,6 +19,7 @@ from .views import (
 from django.contrib.auth.views import LogoutView
 from . import views
 
+app_name = "servicio"
 
 urlpatterns = [
     path("listaObrasciviles/", ObrascivilesLista.as_view(), name="obrasciviles"),
@@ -33,7 +34,7 @@ urlpatterns = [
     path("obrascivilesBorrado/<int:pk>/", ObrascivilesDelete.as_view(), name="obrasciviles_eliminar"),
     path("obrashidraulicasBorrado/<int:pk>/", ObrashidraulicasDelete.as_view(), name="obrashidraulicas_eliminar"),
     path("viasdecomunicacionBorrado/<int:pk>/", ViasdecomunicacionDelete.as_view(), name="viasdecomunicacion_eliminar"),
-    path("ProyectoCreacion/", ProyectoCreacion.as_view(), name="nuevo"),
+    path("proyectoCreacion/", ProyectoCreacion.as_view(), name="proyectoCreacion"),
     path("obrascivilesDetalle/<int:pk>/comentario/", ComentarioPagina.as_view(), name="comentario"),
     path("obrashidraulicasDetalle/<int:pk>/comentario/", ComentarioPagina.as_view(), name="comentario"),
     path("viasdecomunicacionDetalle/<int:pk>/comentario/", ComentarioPagina.as_view(), name="comentario"),

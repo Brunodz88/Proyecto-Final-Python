@@ -105,7 +105,7 @@ class ProyectoCreacion(LoginRequiredMixin, CreateView):
     model = Obra
     form_class = FormularioNuevaObra
     success_url = reverse_lazy("servicio")
-    template_name = "servicio/ProyectoCreacion.html"
+    template_name = "servicio/proyectoCreacion.html"
 
     def form_valid(self, form):
         form.instance.user = self.request.user

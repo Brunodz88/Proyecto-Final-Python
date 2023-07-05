@@ -2,9 +2,10 @@ from django import views
 from django.urls import path
 from django.contrib.auth.views import LoginView, LogoutView
 from .views import HomeView, RegistroPagina, UsuarioEdicion, CambioPassword
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from . import views
+
+app_name = "home"
 
 urlpatterns = [
     path("", HomeView.as_view(), name="index"),
