@@ -12,8 +12,8 @@ urlpatterns = [
     path("login/", LoginView.as_view(template_name="home/login.html"), name="login"),
     path("logout/", LogoutView.as_view(template_name="home/logout.html"), name="logout"),
     path("registro/", RegistroPagina.as_view(), name="registro"),
-    path("edicionPerfil/", UsuarioEdicion.as_view(), name="edicion"),
-    path("passwordCambio/", CambioPassword.as_view(), name="cambio_password"),
-    path("passwordExitoso/", views.password_exitoso, name="cambio_exitoso"),
+    path("edicionPerfil/", UsuarioEdicion.as_view(), name="edicionPerfil"),
+    path("passwordCambio/", CambioPassword.as_view(), name="passwordCambio"),
+    path("passwordExitoso/", views.password_exitoso, name="passwordExitoso"),
     path("about/", views.about, name="about"),
 ]
