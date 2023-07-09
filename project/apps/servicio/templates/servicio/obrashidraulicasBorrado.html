@@ -14,11 +14,11 @@
 <br>
 
 
-{% if user.id == bajo.usuario.id %}
+{% if user.id == obrahidraulica.usuario.id %}
 <div class="container text-center">
 
 <form method="post">{% csrf_token %}
-    <h4>Estás seguro(a) que deseas borrar esta obra hidráulica? {{bajo.marca}} {{bajo.modelo}} ?</h4>
+    <h4>Estás seguro(a) que deseas borrar esta obra hidráulica? {{obrahidraulica.marca}} {{obrahidraulica.modelo}} ?</h4>
     <p>
         <button type="submit" class="btn btn-danger">Eliminar</button>
     </p>

@@ -10,22 +10,22 @@
 
 
 <div class="container text-center">
-    <h1> Lista Obras Civiles</h1>
+    <h1> Lista de Obras Civiles</h1>
 </div>
 
 <br>
 
 <div class="container text-center">
     <div class="row">
-            {% for obrasciviles in obraciviles %}
+            {% for obrasciviles in obrasciviles %}
             <div class="col-sm-6 align-items-center">
                 <div class="card-body">
-                <img src="{{amplificador.imagenInstrumento.url}}" class="" width="100px">
-                {{amplificador.titulo}}
-                <a href="{% url 'amplificador' amplificador.id %}"><i class="bi bi-eye"></i></a>
-                {% if user.id == amplificador.usuario.id %}
-                <a href="{% url 'amplificador_editar' amplificador.id %}"><i class="bi bi-pencil-fill"></i></a>
-                <a href="{% url 'amplificador_eliminar' amplificador.id %}"><i class="bi bi-trash text-danger"></i></a>
+                <img src="{{obrasciviles.imagenObrasciviles.url}}" class="" width="100px">
+                {{obrasciviles.titulo}}
+                <a href="{% url 'obrasciviles' obrasciviles.id %}"><i class="bi bi-eye"></i></a>
+                {% if user.id == obrasciviles.usuario.id %}
+                <a href="{% url 'obrasciviles_editar' obrasciviles.id %}"><i class="bi bi-pencil-fill"></i></a>
+                <a href="{% url 'obrasciviles_eliminar' obrasciviles.id %}"><i class="bi bi-trash text-danger"></i></a>
                 <br>
                 <br>
                 <br>

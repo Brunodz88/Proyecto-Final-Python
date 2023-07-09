@@ -9,7 +9,7 @@
 
 <p><h4>{{viasdecomunicacion.titulo}}</h4></p>
 {% if viasdecomunicacion.imagenInstrumento %}
-    <p><img src="{{amplificador.imagenInstrumento.url}}" alt=""></p>
+    <p><img src="{{viasdecomunicacion.imagenViasdecomunicacion.url}}" alt=""></p>
 {% endif %}
 <p>Marca: {{viasdecomunicacion.marca}}</p>
 <p>Modelo: {{viasdecomunicacion.modelo}}</p>
@@ -25,17 +25,17 @@
     <h4>Comentarios...</h4>
     <br>
     <div class="container">
-    {% if not amplificador.comentarios.all %}
+    {% if not viasdecomunicacion.comentarios.all %}
         No han comentado este instrumento
     {% else %}
-        {% for comentario in amplificador.comentarios.all %}
+        {% for comentario in viasdecomunicacion.comentarios.all %}
         <p><strong>{{comentario.nombre}}</strong></p>
         <p>{{comentario.mensaje}}</p>
         <p><small>{{comentario.fechaComentario}}</small></p>
         <hr>
         {% endfor %}
     {% endif %}
-    <a href="{% url 'comentario' amplificador.pk %}">Agrega un Comentario</a>
+    <a href="{% url 'comentario' viasdecomunicacion.pk %}">Agrega un Comentario</a>
     </div>
 </div>
 <br>

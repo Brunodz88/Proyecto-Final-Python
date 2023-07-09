@@ -11,13 +11,13 @@
 {% if obrasciviles.imagenInstrumento %}
     <p><img src="{{amplificador.imagenInstrumento.url}}" alt=""></p>
 {% endif %}
-<p>Marca: {{amplificador.marca}}</p>
-<p>Modelo: {{amplificador.modelo}}</p>
-<p>Descripción: {{amplificador.descripcion}}</p>
-<p>Año: {{amplificador.year}}</p>
-<p>Precio(US$): {{amplificador.precio}}</p>
-<p>Teléfono de Contacto: {{amplificador.telefonoContacto}}</p>
-<p>Email de Contacto: {{amplificador.emailContacto}}</p>
+<p>Marca: {{obrasciviles.marca}}</p>
+<p>Modelo: {{obrasciviles.modelo}}</p>
+<p>Descripción: {{obrasciviles.descripcion}}</p>
+<p>Año: {{obrasciviles.year}}</p>
+<p>Precio(US$): {{obrasciviles.precio}}</p>
+<p>Teléfono de Contacto: {{obrasciviles.telefonoContacto}}</p>
+<p>Email de Contacto: {{obrasciviles.emailContacto}}</p>
 
 </div>
 <br>
@@ -25,10 +25,10 @@
     <h4>Comentarios...</h4>
     <br>
     <div class="container">
-    {% if not amplificador.comentarios.all %}
+    {% if not obrasciviles.comentarios.all %}
         No han comentado este instrumento
     {% else %}
-        {% for comentario in amplificador.comentarios.all %}
+        {% for comentario in obrasciviles.comentarios.all %}
         <p><strong>{{comentario.nombre}}</strong></p>
         <p>{{comentario.mensaje}}</p>
         <p><small>{{comentario.fechaComentario}}</small></p>

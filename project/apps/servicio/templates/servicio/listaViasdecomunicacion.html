@@ -10,7 +10,7 @@
 
 
 <div class="container text-center">
-    <h1> Lista de Vias de Comunicacion </h1>
+    <h1> Lista de obras en Vias de Comunicación </h1>
 </div>
 
 <br>
@@ -20,12 +20,12 @@
             {% for viasdecomunicacion in viasdecomunicacion %}
             <div class="col-sm-6 align-items-center">
                 <div class="card-body">
-                <img src="{{bajo.imagenInstrumento.url}}" class="" width="100px">
+                <img src="{{viasdecomunicacion.imagenViasdecomunicacion.url}}" class="" width="100px">
                 {{bajo.titulo}}
-                <a href="{% url 'bajo' bajo.id %}"><i class="bi bi-eye"></i></a>
+                <a href="{% url 'viasdecomunicacion' viasdecomunicacion.id %}"><i class="bi bi-eye"></i></a>
                 {% if user.id == bajo.usuario.id %}
-                <a href="{% url 'bajo_editar' bajo.id %}"><i class="bi bi-pencil-fill"></i></a>
-                <a href="{% url 'bajo_eliminar' bajo.id %}"><i class="bi bi-trash text-danger"></i></a>
+                <a href="{% url 'viasdecomunicacion_editar' bajo.id %}"><i class="bi bi-pencil-fill"></i></a>
+                <a href="{% url 'viasdecomunicacion_eliminar' bajo.id %}"><i class="bi bi-trash text-danger"></i></a>
                 <br>
                 <br>
                 <br>
