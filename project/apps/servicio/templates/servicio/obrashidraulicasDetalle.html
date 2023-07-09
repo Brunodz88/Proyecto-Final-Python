@@ -1,4 +1,4 @@
-{% extends 'Base/home.html' %}
+{% extends 'home/base.html' %}
 
 {% block content %}
 
@@ -7,17 +7,17 @@
 
 <div class="container">
 
-<p><h4>{{bajo.titulo}}</h4></p>
-{% if bajo.imagenInstrumento %}
+<p><h4>{{obrashidraulicas.titulo}}</h4></p>
+{% if obrashidraulicas.imagenInstrumento %}
     <p><img src="{{bajo.imagenInstrumento.url}}" alt=""></p>
 {% endif %}
-<p>Marca: {{bajo.marca}}</p>
-<p>Modelo: {{bajo.modelo}}</p>
-<p>Descripción: {{bajo.descripcion}}</p>
-<p>Año: {{bajo.year}}</p>
-<p>Precio(US$): {{bajo.precio}}</p>
-<p>Teléfono de Contacto: {{bajo.telefonoContacto}}</p>
-<p>Email de Contacto: {{bajo.emailContacto}}</p>
+<p>Marca: {{obrashidraulicas.marca}}</p>
+<p>Modelo: {{obrashidraulicas.modelo}}</p>
+<p>Descripción: {{obrashidraulicas.descripcion}}</p>
+<p>Año: {{obrashidraulicas.year}}</p>
+<p>Precio(US$): {{obrashidraulicas.precio}}</p>
+<p>Teléfono de Contacto: {{obrashidraulicas.telefonoContacto}}</p>
+<p>Email de Contacto: {{obrashidraulicas.emailContacto}}</p>
 
 </div>
 <br>
@@ -35,7 +35,7 @@
         <hr>
         {% endfor %}
     {% endif %}
-    <a href="{% url 'comentario' bajo.pk %}">Agrega un Comentario</a>
+    <a href="{% url 'comentario' obrashidraulicas.pk %}">Agrega un Comentario</a>
     </div>
 </div>
 
