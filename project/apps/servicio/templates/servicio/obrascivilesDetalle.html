@@ -9,13 +9,11 @@
 
 <p><h4>{{obrasciviles.titulo}}</h4></p>
 {% if obrasciviles.imagenInstrumento %}
-    <p><img src="{{amplificador.imagenInstrumento.url}}" alt=""></p>
+    <p><img src="{{obrasciviles.imagenObra.url}}" alt=""></p>
 {% endif %}
-<p>Marca: {{obrasciviles.marca}}</p>
-<p>Modelo: {{obrasciviles.modelo}}</p>
 <p>Descripción: {{obrasciviles.descripcion}}</p>
 <p>Año: {{obrasciviles.year}}</p>
-<p>Precio(US$): {{obrasciviles.precio}}</p>
+<p>Valor (US$): {{obrasciviles.precio}}</p>
 <p>Teléfono de Contacto: {{obrasciviles.telefonoContacto}}</p>
 <p>Email de Contacto: {{obrasciviles.emailContacto}}</p>
 
@@ -26,7 +24,7 @@
     <br>
     <div class="container">
     {% if not obrasciviles.comentarios.all %}
-        No han comentado este instrumento
+        No han comentado este proyecto
     {% else %}
         {% for comentario in obrasciviles.comentarios.all %}
         <p><strong>{{comentario.nombre}}</strong></p>
@@ -35,7 +33,7 @@
         <hr>
         {% endfor %}
     {% endif %}
-    <a href="{% url 'comentario' amplificador.pk %}">Agrega un Comentario</a>
+    <a href="{% url 'comentario' obrasciviles.pk %}">Agrega un Comentario</a>
     </div>
 </div>
 <br>

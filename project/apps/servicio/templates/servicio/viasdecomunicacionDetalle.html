@@ -8,14 +8,12 @@
 <div class="container">
 
 <p><h4>{{viasdecomunicacion.titulo}}</h4></p>
-{% if viasdecomunicacion.imagenInstrumento %}
-    <p><img src="{{viasdecomunicacion.imagenViasdecomunicacion.url}}" alt=""></p>
+{% if viasdecomunicacion.imagenObra %}
+    <p><img src="{{viasdecomunicacion.imagenObra.url}}" alt=""></p>
 {% endif %}
-<p>Marca: {{viasdecomunicacion.marca}}</p>
-<p>Modelo: {{viasdecomunicacion.modelo}}</p>
 <p>Descripción: {{viasdecomunicacion.descripcion}}</p>
 <p>Año: {{viasdecomunicacion.year}}</p>
-<p>Precio(US$): {{viasdecomunicacion.precio}}</p>
+<p>Valor(US$): {{viasdecomunicacion.precio}}</p>
 <p>Teléfono de Contacto: {{viasdecomunicacion.telefonoContacto}}</p>
 <p>Email de Contacto: {{viasdecomunicacion.emailContacto}}</p>
 
@@ -26,7 +24,7 @@
     <br>
     <div class="container">
     {% if not viasdecomunicacion.comentarios.all %}
-        No han comentado este instrumento
+        No han comentado este proyecto
     {% else %}
         {% for comentario in viasdecomunicacion.comentarios.all %}
         <p><strong>{{comentario.nombre}}</strong></p>

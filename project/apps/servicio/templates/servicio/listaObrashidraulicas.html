@@ -18,9 +18,9 @@
             {% for obrashidraulicas in obrashidraulicas %}
             <div class="col-sm-6 align-items-center">
                 <div class="card-body">
-                <img src="{{obrashidraulicas.imagenObrashidraulicas.url}}" class="" width="100px">
+                <img src="{{obrashidraulicas.imagenObra.url}}" class="" width="100px">
                 {{bajo.titulo}}
-                <a href="{% url 'bajo' bajo.id %}"><i class="bi bi-eye"></i></a>
+                <a href="{% url 'obrashidraulicas' obrashidraulicas.id %}"><i class="bi bi-eye"></i></a>
                 {% if user.id == obrashidraulicas.usuario.id %}
                 <a href="{% url 'obrashidraulicas_editar' obrashidraulicas.id %}"><i class="bi bi-pencil-fill"></i></a>
                 <a href="{% url 'obrashidraulicas_eliminar' obrashidraulicas.id %}"><i class="bi bi-trash text-danger"></i></a>

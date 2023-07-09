@@ -23,9 +23,9 @@
                 <img src="{{viasdecomunicacion.imagenViasdecomunicacion.url}}" class="" width="100px">
                 {{bajo.titulo}}
                 <a href="{% url 'viasdecomunicacion' viasdecomunicacion.id %}"><i class="bi bi-eye"></i></a>
-                {% if user.id == bajo.usuario.id %}
-                <a href="{% url 'viasdecomunicacion_editar' bajo.id %}"><i class="bi bi-pencil-fill"></i></a>
-                <a href="{% url 'viasdecomunicacion_eliminar' bajo.id %}"><i class="bi bi-trash text-danger"></i></a>
+                {% if user.id == viasdecomunicacion.usuario.id %}
+                <a href="{% url 'viasdecomunicacion_editar' viasdecomunicacion.id %}"><i class="bi bi-pencil-fill"></i></a>
+                <a href="{% url 'viasdecomunicacion_eliminar' viasdecomunicacion.id %}"><i class="bi bi-trash text-danger"></i></a>
                 <br>
                 <br>
                 <br>

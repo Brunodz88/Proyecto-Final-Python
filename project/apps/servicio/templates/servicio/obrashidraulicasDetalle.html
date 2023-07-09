@@ -8,14 +8,12 @@
 <div class="container">
 
 <p><h4>{{obrashidraulicas.titulo}}</h4></p>
-{% if obrashidraulicas.imagenObrashidraulicas %}
-    <p><img src="{{bajo.imagenObrashidraulicas.url}}" alt=""></p>
+{% if obrashidraulicas.imagenObra %}
+    <p><img src="{{obrashidraulicas.imagenObra.url}}" alt=""></p>
 {% endif %}
-<p>Marca: {{obrashidraulicas.marca}}</p>
-<p>Modelo: {{obrashidraulicas.modelo}}</p>
 <p>Descripción: {{obrashidraulicas.descripcion}}</p>
 <p>Año: {{obrashidraulicas.year}}</p>
-<p>Precio(US$): {{obrashidraulicas.precio}}</p>
+<p>Valor(US$): {{obrashidraulicas.precio}}</p>
 <p>Teléfono de Contacto: {{obrashidraulicas.telefonoContacto}}</p>
 <p>Email de Contacto: {{obrashidraulicas.emailContacto}}</p>
 
@@ -25,8 +23,8 @@
     <h4>Comentarios...</h4>
     <br>
     <div class="container">
-    {% if not bajo.comentarios.all %}
-        No han comentado este instrumento
+    {% if not obrashidraulicas.comentarios.all %}
+        No han comentado este proyecto
     {% else %}
         {% for comentario in bajo.comentarios.all %}
         <p><strong>{{comentario.nombre}}</strong></p>

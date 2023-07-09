@@ -20,7 +20,7 @@
             {% for obrasciviles in obrasciviles %}
             <div class="col-sm-6 align-items-center">
                 <div class="card-body">
-                <img src="{{obrasciviles.imagenObrasciviles.url}}" class="" width="100px">
+                <img src="{{obrasciviles.imagenObra.url}}" class="" width="100px">
                 {{obrasciviles.titulo}}
                 <a href="{% url 'obrasciviles' obrasciviles.id %}"><i class="bi bi-eye"></i></a>
                 {% if user.id == obrasciviles.usuario.id %}
