@@ -8,11 +8,10 @@ from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import UpdateView, FormView
 from .forms import FormularioRegistroUsuario, FormularioCambioPassword, FormularioEdicion
-from . import views
 
 
-class HomeView(LoginRequiredMixin, TemplateView):
-    template_name = "home/index.html"
+def index(request: HttpRequest) -> HttpResponse:
+    return render(request, "home/index.html")
 
 
 class LoginPagina(LoginView):
@@ -29,7 +28,7 @@ class RegistroPagina(FormView):
     template_name = "home/registro.html"
     form_class = FormularioRegistroUsuario
     redirect_autheticated_user = True
-    success_url = reverse_lazy("home")
+    success_url = reverse_lazy("index")
 
     def form_valid(self, form):
         user = form.save()
@@ -39,7 +38,7 @@ class RegistroPagina(FormView):
 
     def get(self, *args, **kwargs):
         if self.request.user.is_authenticated:
-            return redirect("home")
+            return redirect("index")
         return super(RegistroPagina, self).get(*args, **kwargs)
 
 
@@ -55,7 +54,7 @@ class UsuarioEdicion(UpdateView):
 class CambioPassword(PasswordChangeView):
     form_class = FormularioCambioPassword
     template_name = "home/passwordCambio.html"
-    success_url = reverse_lazy("home/password_exitoso.html")
+    success_url = reverse_lazy("home/passwordExitoso.html")
 
 
 def password_exitoso(request):

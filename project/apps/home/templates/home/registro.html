@@ -1,4 +1,4 @@
-{% extends 'base/home.html' %}
+{% extends 'home/base.html' %}
 
 {% block content %}
 
@@ -21,7 +21,7 @@
     </div>
     <br>
     <div class="container text-center">
-    <p>Ya tienes una cuenta? <a href="{% url 'login' %}">Iniciar Sesión</a></p>
+    <p>Ya tienes una cuenta? <a href="{% url 'home:login' %}">Iniciar Sesión</a></p>
     </div>
 </div>
 {% endblock content %}

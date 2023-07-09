@@ -1,14 +1,15 @@
 from django import views
 from django.urls import path
 from django.contrib.auth.views import LoginView, LogoutView
-from .views import HomeView, RegistroPagina, UsuarioEdicion, CambioPassword
+from .views import TemplateView, RegistroPagina, UsuarioEdicion, CambioPassword
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from . import views
 
 app_name = "home"
 
 urlpatterns = [
-    path("", HomeView.as_view(), name="index"),
+    path("", TemplateView.as_view(template_name="home/index.html"), name="index"),
     path("login/", LoginView.as_view(template_name="home/login.html"), name="login"),
     path("logout/", LogoutView.as_view(template_name="home/logout.html"), name="logout"),
     path("registro/", RegistroPagina.as_view(), name="registro"),
@@ -16,4 +17,4 @@ urlpatterns = [
     path("passwordCambio/", CambioPassword.as_view(), name="passwordCambio"),
     path("passwordExitoso/", views.password_exitoso, name="passwordExitoso"),
     path("about/", views.about, name="about"),
-]
+] + staticfiles_urlpatterns()
