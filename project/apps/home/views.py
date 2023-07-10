@@ -1,13 +1,18 @@
 from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.auth import login
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.views import LoginView, PasswordChangeView
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 from django.urls import reverse, reverse_lazy
-from django.contrib.auth import login
-from django.contrib.auth.views import LoginView, PasswordChangeView
 from django.views.generic import TemplateView
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic.edit import UpdateView, FormView
-from .forms import FormularioRegistroUsuario, FormularioCambioPassword, FormularioEdicion
+from django.views.generic.edit import FormView, UpdateView
+
+from .forms import (
+    FormularioCambioPassword,
+    FormularioEdicion,
+    FormularioRegistroUsuario,
+)
 
 
 def index(request: HttpRequest) -> HttpResponse:
@@ -18,10 +23,10 @@ class LoginPagina(LoginView):
     template_name = "home/login.html"
     fields = "__all__"
     redirect_autheticated_user = True
-    success_url = reverse_lazy("home/index.html")
+    success_url = reverse_lazy("home:index")
 
     def get_success_url(self):
-        return reverse_lazy("home/index.html")
+        return reverse_lazy("home:index")
 
 
 class RegistroPagina(FormView):
@@ -45,7 +50,7 @@ class RegistroPagina(FormView):
 class UsuarioEdicion(UpdateView):
     form_class = FormularioEdicion
     template_name = "home/edicionPerfil.html"
-    success_url = reverse_lazy("home/index.html")
+    success_url = reverse_lazy("home:index")
 
     def get_object(self):
         return self.request.user
@@ -54,14 +59,12 @@ class UsuarioEdicion(UpdateView):
 class CambioPassword(PasswordChangeView):
     form_class = FormularioCambioPassword
     template_name = "home/passwordCambio.html"
-    success_url = reverse_lazy("home/passwordExitoso.html")
+    success_url = reverse_lazy("home:passwordExitoso")
 
 
 def password_exitoso(request):
-    return render(request, "home/passwordExitoso.html", {})
+    return render(request, "home:passwordExitoso", {})
 
 
 def about(request: HttpRequest) -> HttpResponse:
     return render(request, "home/about.html")
-
-
