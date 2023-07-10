@@ -24,19 +24,19 @@ class ProyectoCreacion(LoginRequiredMixin, CreateView):
 # OBRAS CIVILES
 
 
-class ObracivilLista(LoginRequiredMixin, ListView):
+class ObrascivilesLista(LoginRequiredMixin, ListView):
     context_object_name = "obrasciviles"
     queryset = Obra.objects.filter(obra__startswith="obrasciviles")
     template_name = "servicio/listaObrasciviles.html"
 
 
-class ObracivilDetalle(LoginRequiredMixin, DetailView):
+class ObrascivilesDetalle(LoginRequiredMixin, DetailView):
     model = Obra
     context_object_name = "obrasciviles"
     template_name = "servicio/obrascivilesDetalle.html"
 
 
-class ObracivilUpdate(LoginRequiredMixin, UpdateView):
+class ObrascivilesUpdate(LoginRequiredMixin, UpdateView):
     model = Obra
     form_class = ActualizacionObra
     success_url = reverse_lazy("home:index")
@@ -44,7 +44,7 @@ class ObracivilUpdate(LoginRequiredMixin, UpdateView):
     template_name = "servicio/obrascivilesEdicion.html"
 
 
-class ObracivilDelete(LoginRequiredMixin, DeleteView):
+class ObrascivilesDelete(LoginRequiredMixin, DeleteView):
     model = Obra
     success_url = reverse_lazy("home:index")
     context_object_name = "obrasciviles"

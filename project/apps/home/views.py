@@ -33,7 +33,7 @@ class RegistroPagina(FormView):
     template_name = "home/registro.html"
     form_class = FormularioRegistroUsuario
     redirect_autheticated_user = True
-    success_url = reverse_lazy("index")
+    success_url = reverse_lazy("home:index")
 
     def form_valid(self, form):
         user = form.save()
@@ -43,7 +43,7 @@ class RegistroPagina(FormView):
 
     def get(self, *args, **kwargs):
         if self.request.user.is_authenticated:
-            return redirect("index")
+            return redirect("home:index")
         return super(RegistroPagina, self).get(*args, **kwargs)
 
 

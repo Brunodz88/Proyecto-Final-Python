@@ -15,15 +15,15 @@
 
 <div class="container text-center">
     <div class="row">
-            {% for obrashidraulicas in obrashidraulicas %}
+            {% for obras in obrashidraulicas %}
             <div class="col-sm-6 align-items-center">
                 <div class="card-body">
                 <img src="{{obrashidraulicas.imagenObra.url}}" class="" width="100px">
                 {{bajo.titulo}}
-                <a href="{% url 'obrashidraulicas' obrashidraulicas.id %}"><i class="bi bi-eye"></i></a>
+                <a href="{% url 'servicio:obrashidraulicas_detalle' obras.id %}"><i class="bi bi-eye"></i></a>
                 {% if user.id == obrashidraulicas.usuario.id %}
-                <a href="{% url 'obrashidraulicas_editar' obrashidraulicas.id %}"><i class="bi bi-pencil-fill"></i></a>
-                <a href="{% url 'obrashidraulicas_eliminar' obrashidraulicas.id %}"><i class="bi bi-trash text-danger"></i></a>
+                <a href="{% url 'servicio:obrashidraulicas_editar' obras.id %}"><i class="bi bi-pencil-fill"></i></a>
+                <a href="{% url 'servicio:obrashidraulicas_eliminar' obras.id %}"><i class="bi bi-trash text-danger"></i></a>
                 <br>
                 <br>
                 <br>

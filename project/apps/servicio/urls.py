@@ -1,23 +1,22 @@
 from django import views
 from django.urls import path
+
 from .views import (
-    ObrascivilesDelete,
-    ProyectoCreacion,
-    ObrascivilesDetalle,
-    ObrashidraulicasLista,
-    ObrascivilesLista,
-    ViasdecomunicacionLista,
-    ObrashidraulicasDetalle,
-    ViasdecomunicacionDetalle,
-    ObrascivilesUpdate,
-    ObrashidraulicasUpdate,
-    ViasdecomunicacionUpdate,
-    ObrashidraulicasDelete,
-    ViasdecomunicacionDelete,
     ComentarioPagina,
+    ObrascivilesDelete,
+    ObrascivilesDetalle,
+    ObrascivilesLista,
+    ObrascivilesUpdate,
+    ObrashidraulicasDelete,
+    ObrashidraulicasDetalle,
+    ObrashidraulicasLista,
+    ObrashidraulicasUpdate,
+    ProyectoCreacion,
+    ViasdecomunicacionDelete,
+    ViasdecomunicacionDetalle,
+    ViasdecomunicacionLista,
+    ViasdecomunicacionUpdate,
 )
-from django.contrib.auth.views import LogoutView
-from . import views
 
 app_name = "servicio"
 
@@ -28,7 +27,7 @@ urlpatterns = [
     path("listaViasdecomunicacion/", ViasdecomunicacionLista.as_view(), name="viasdecomunicacion"),
     path("obrascivilesDetalle/<int:pk>/", ObrascivilesDetalle.as_view(), name="obrasciviles_detalle"),
     path("obrashidraulicasDetalle/<int:pk>/", ObrashidraulicasDetalle.as_view(), name="obrashidraulicas_detalle"),
-    path("viasdecomunicacionDetalle/<int:pk>/", ViasdecomunicacionDetalle.as_view(), name="viasdeocomunicacion_detalle"),
+    path("viasdecomunicacionDetalle/<int:pk>/", ViasdecomunicacionDetalle.as_view(), name="viasdecomunicacion_detalle"),
     path("obrascivilesEdicion/<int:pk>/", ObrascivilesUpdate.as_view(), name="obrasciviles_editar"),
     path("obrashidraulicasEdicion/<int:pk>/", ObrashidraulicasUpdate.as_view(), name="obrashidraulicas_editar"),
     path("viasdecomunicacionEdicion/<int:pk>/", ViasdecomunicacionUpdate.as_view(), name="viasdecomunicacion_editar"),
