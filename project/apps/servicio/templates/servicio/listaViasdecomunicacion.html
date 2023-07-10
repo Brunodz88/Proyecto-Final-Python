@@ -20,7 +20,7 @@
             {% for viasdecomunicacion in viasdecomunicacion %}
             <div class="col-sm-6 align-items-center">
                 <div class="card-body">
-                <img src="{{viasdecomunicacion.imagenViasdecomunicacion.url}}" class="" width="100px">
+                <img src="{{viasdecomunicacion.ImagenObra.url}}" class="" width="100px">
                 {{bajo.titulo}}
                 <a href="{% url 'viasdecomunicacion' viasdecomunicacion.id %}"><i class="bi bi-eye"></i></a>
                 {% if user.id == viasdecomunicacion.usuario.id %}

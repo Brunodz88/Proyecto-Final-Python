@@ -98,13 +98,13 @@ class ViasdecomunicacionDelete(LoginRequiredMixin, DeleteView):
     template_name = "servicio/viasdecomunicacionBorrado.html"
 
 
-# CREACION INSTRUMENTO
+# CREACION PROYECTO
 
 
 class ProyectoCreacion(LoginRequiredMixin, CreateView):
     model = Obra
     form_class = FormularioNuevaObra
-    success_url = reverse_lazy("servicio")
+    success_url = reverse_lazy("")
     template_name = "servicio/proyectoCreacion.html"
 
     def form_valid(self, form):
