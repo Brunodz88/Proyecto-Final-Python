@@ -22,6 +22,7 @@ from . import views
 app_name = "servicio"
 
 urlpatterns = [
+    path("proyectoCreacion/", ProyectoCreacion.as_view(), name="proyectoCreacion"),
     path("listaObrasciviles/", ObrascivilesLista.as_view(), name="obrasciviles"),
     path("listaObrashidraulicas/", ObrashidraulicasLista.as_view(), name="obrashidraulicas"),
     path("listaViasdecomunicacion/", ViasdecomunicacionLista.as_view(), name="viasdecomunicacion"),
@@ -34,7 +35,6 @@ urlpatterns = [
     path("obrascivilesBorrado/<int:pk>/", ObrascivilesDelete.as_view(), name="obrasciviles_eliminar"),
     path("obrashidraulicasBorrado/<int:pk>/", ObrashidraulicasDelete.as_view(), name="obrashidraulicas_eliminar"),
     path("viasdecomunicacionBorrado/<int:pk>/", ViasdecomunicacionDelete.as_view(), name="viasdecomunicacion_eliminar"),
-    path("proyectoCreacion/", ProyectoCreacion.as_view(), name="proyectoCreacion"),
     path("obrascivilesDetalle/<int:pk>/comentario/", ComentarioPagina.as_view(), name="comentario"),
     path("obrashidraulicasDetalle/<int:pk>/comentario/", ComentarioPagina.as_view(), name="comentario"),
     path("viasdecomunicacionDetalle/<int:pk>/comentario/", ComentarioPagina.as_view(), name="comentario"),

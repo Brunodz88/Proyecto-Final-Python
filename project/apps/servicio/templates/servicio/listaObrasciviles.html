@@ -10,31 +10,31 @@
 
 
 <div class="container text-center">
-    <h1> Lista de Obras Civiles</h1>
+    <h1> Obras Civiles </h1>
 </div>
 
 <br>
 
 <div class="container text-center">
     <div class="row">
-            {% for obrasciviles in obrasciviles %}
-            <div class="col-sm-6 align-items-center">
-                <div class="card-body">
-                <img src="{{obrasciviles.imagenObra.url}}" class="" width="100px">
-                {{obrasciviles.titulo}}
-                <a href="{% url 'obrasciviles' obrasciviles.id %}"><i class="bi bi-eye"></i></a>
-                {% if user.id == obrasciviles.usuario.id %}
-                <a href="{% url 'obrasciviles_editar' obrasciviles.id %}"><i class="bi bi-pencil-fill"></i></a>
-                <a href="{% url 'obrasciviles_eliminar' obrasciviles.id %}"><i class="bi bi-trash text-danger"></i></a>
+        {% for obracivil in obrasciviles %}
+        <div class="col-sm-6 align-items-center">
+            <div class="card-body">
+                <img src="{{ obracivil.imagenObra.url }}" class="" width="100px">
+                {{ obracivil.titulo }}
+                <a href="{% url 'servicio:obrasciviles' obracivil.id %}"><i class="bi bi-eye"></i></a>
+                {% if user.id == obracivil.usuario.id %}
+                <a href="{% url 'servicio:obrasciviles_editar' obracivil.id %}"><i class="bi bi-pencil-fill"></i></a>
+                <a href="{% url 'servicio:obrasciviles_eliminar' obracivil.id %}"><i class="bi bi-trash text-danger"></i></a>
                 <br>
                 <br>
                 <br>
                 <br>
                 {% endif %}
-                </div>
             </div>
-            {% endfor %}
+        </div>
+        {% endfor %}
     </div>
 </div>
 
-{% endblock %}
+{% endblock content %}
