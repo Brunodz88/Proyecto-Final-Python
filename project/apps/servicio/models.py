@@ -12,8 +12,6 @@ class Obra(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     titulo = models.CharField(max_length=200)
     obra = models.CharField(max_length=30, choices=obraseleccion, default="obrasciviles")
-    marca = models.CharField(max_length=40)
-    modelo = models.CharField(max_length=40)
     descripcion = models.TextField(null=True, blank=True)
     year = models.IntegerField()
     precio = models.DecimalField(max_digits=10, decimal_places=2)
