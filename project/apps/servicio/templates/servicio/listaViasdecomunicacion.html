@@ -5,10 +5,6 @@
 <br>
 <br>
 
-
-
-
-
 <div class="container text-center">
     <h1> Lista de obras en Vias de Comunicación </h1>
 </div>
@@ -17,15 +13,15 @@
 
 <div class="container text-center">
     <div class="row">
-            {% for viasdecomunicacion in viasdecomunicacion %}
+            {% for obra in viasdecomunicacion %}
             <div class="col-sm-6 align-items-center">
                 <div class="card-body">
-                <img src="{{viasdecomunicacion.ImagenObra.url}}" class="" width="100px">
+                <img src="{{obra.ImagenObra.url}}" class="" width="100px">
                 {{bajo.titulo}}
-                <a href="{% url 'viasdecomunicacion' viasdecomunicacion.id %}"><i class="bi bi-eye"></i></a>
-                {% if user.id == viasdecomunicacion.usuario.id %}
-                <a href="{% url 'viasdecomunicacion_editar' viasdecomunicacion.id %}"><i class="bi bi-pencil-fill"></i></a>
-                <a href="{% url 'viasdecomunicacion_eliminar' viasdecomunicacion.id %}"><i class="bi bi-trash text-danger"></i></a>
+                <a href="{% url 'servicio:viasdecomunicacion' obra.id %}"><i class="bi bi-eye"></i></a>
+                {% if user.id == obra.usuario.id %}
+                <a href="{% url 'servicio:viasdecomunicacion_editar' obra.id %}"><i class="bi bi-pencil-fill"></i></a>
+                <a href="{% url 'servicio:viasdecomunicacion_eliminar' obra.id %}"><i class="bi bi-trash text-danger"></i></a>
                 <br>
                 <br>
                 <br>

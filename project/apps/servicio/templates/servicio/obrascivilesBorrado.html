@@ -12,11 +12,11 @@
 <br>
 
 
-{% if user.id == obrasciviles.usuario.id %}
+{% if user.id == obra.usuario.id %}
 <div class="container text-center">
 
 <form method="post">{% csrf_token %}
-    Estás seguro que deseas borrar este proyecto civil? {{obrasciviles.titulo}} ?
+    Estás seguro que deseas borrar este proyecto civil? {{obra.titulo}} ?
     <p>
         <button type="submit" class="btn btn-danger">Eliminar</button>
     </p>
