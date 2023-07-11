@@ -9,13 +9,13 @@ Trabajos realizados en ingenieria civil y clientes en busca de profesionales
 1.0
 
 ## Descripción del Proyecto
-Página Web destinada a usuarios que deseen compartir los servicios realizados en ingenieria civil y clientes que desean adquirir servicios de ingeniería.
+Página Web destinada a usuarios que deseen compartir trabajos realizados de ingenieria civil a fin de relacionarse con colegas y/o potenciales clientes que desean adquirir servicios ingenieriles.
 
-A fin de navegar por las secciones de la página web, el usuario será requerido iniciar sesión o registrarse en caso de no contar con usuario o contraseña. En ambas opciones, una vez la página valide la autenticación del usuario, este será redirigido al inicio de la página web.
+A fin de navegar por las secciones de la página web, el usuario deberá iniciar sesión o registrarse en caso de no contar con usuario o contraseña. En ambas opciones, una vez que la página valide la autenticación del usuario, este será redirigido al inicio de la página web.
 
 Los usuarios pueden realizar las siguientes accciones:
 
-- Publicar trabajos en servicios profesionales ingenierilees, donde pueden describir sus experiencias laborales en el rubro.
+- Publicar trabajos en servicios profesionales, donde pueden describir sus experiencias laborales en el rubro.
 
 - Visualizar los servicios publicados, los cuales están distribuidos en las secciones "Obras civiles", "Vias de Comunicación", "Obras hidráulias".
 
@@ -40,7 +40,7 @@ Nota: La opción de editar y eliminar servicios profesionales solo le está perm
 - Bootstrap 5.2
 
 ##### Back-End
-- Python 3.10.4
+- Python 3.11.2
 - Django 4.0
 
 ## Video Demostración
