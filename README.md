@@ -3,7 +3,7 @@
 #### Alumno: Bruno Diaz
 
 ## Nombre del Proyecto
-Trabajos realizados en ingenieria civil y clientes en busca de profesionales
+Civiles en ACCIÓN!
 
 ## Versión
 1.0
@@ -40,7 +40,7 @@ Nota: La opción de editar y eliminar servicios profesionales solo le está perm
 - Bootstrap 5.2
 
 ##### Back-End
-- Python 3.11.2
+- Python 3.11.
 - Django 4.0
 
 ## Video Demostración
