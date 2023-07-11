@@ -21,7 +21,7 @@
                 <img src="{{ obra.imagenObra.url }}" class="" width="300px">
                 {{ obra.titulo }}
                 <a href="{% url 'servicio:obrasciviles_detalle' obra.id %}"><i class="bi bi-eye"></i></a>
-                {% if id == usuario_id %}
+                {% if user.id == servicio_obra.usuario.id %}
                 <a href="{% url 'servicio:obrasciviles_editar' obra.id %}"><i class="bi bi-pencil-fill"></i></a>
                 <a href="{% url 'servicio:obrasciviles_eliminar' obra.id %}"><i class="bi bi-trash text-danger"></i></a>
                 <br>
