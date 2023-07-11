@@ -1,6 +1,6 @@
-# Proyecto Final Coder House - Python
+# Proyecto Final CoderHouse - Python
 #### Comisión: 40405
-#### Alumno: Bruno Diaz
+#### Alumno: Bruno Omar Diaz
 
 ## Nombre del Proyecto
 Civiles en ACCIÓN!
