@@ -1,11 +1,11 @@
 from django import forms
+from django.contrib.auth.models import User
 from django.contrib.auth.forms import (
     AuthenticationForm,
     PasswordChangeForm,
     UserChangeForm,
     UserCreationForm,
 )
-from django.contrib.auth.models import User
 
 
 class CustomAuthenticationForm(AuthenticationForm):
@@ -34,10 +34,10 @@ class FormularioRegistroUsuario(UserCreationForm):
 
 class FormularioEdicion(UserChangeForm):
     password = None
+    username = forms.CharField(max_length=20, label="Usuario", widget=forms.TextInput(attrs={"class": "form-control"}))
     email = forms.CharField(widget=forms.EmailInput(attrs={"class": "form-control"}))
     first_name = forms.CharField(max_length=20, label="Nombre", widget=forms.TextInput(attrs={"class": "form-control"}))
     last_name = forms.CharField(max_length=20, label="Apellido", widget=forms.TextInput(attrs={"class": "form-control"}))
-    username = forms.CharField(max_length=20, label="Usuario", widget=forms.TextInput(attrs={"class": "form-control"}))
 
     class Meta:
         model = User
