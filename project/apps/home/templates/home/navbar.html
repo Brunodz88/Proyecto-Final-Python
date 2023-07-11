@@ -35,15 +35,13 @@
                 <div class="container"></div>
                 <div class="container"></div>
                 <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
+                <div class="container"></div> 
                 {% if request.user.is_authenticated %}
-                <div class="container">
-                <li class="nav-item">
-                  <span class="text-light"> Hola! <strong>{{request.user.first_name}}</strong></span>
-                </li>
-                </div>
+                  <div class="container">
+                    <li class="nav-item">
+                    <span class="text-light"> Hola! <strong>{{request.user.first_name}}</strong></span>
+                    </li>
+                  </div>
                 <div class="container">
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'home:edicionPerfil' %}"><span class="text-primary">Perfil</span></a>
