@@ -11,13 +11,13 @@
 
 <br>
 
-<div class="container text-center">
+<div class="container text-left">
     <div class="row">
             {% for obra in viasdecomunicacion %}
-            <div class="col-sm-6 align-items-center">
+            <div class="col-sm-8 align-items-left text-left">
                 <div class="card-body">
-                <img src="{{obra.ImagenObra.url}}" class="" width="300px">
-                {{bajo.titulo}}
+                <img src="{{obra.imagenObra.url}}" class="" width="300px">
+                {{obra.titulo}}
                 <a href="{% url 'servicio:viasdecomunicacion_detalle' obra.id %}"><i class="bi bi-eye"></i></a>
                 {% if user.id == obra.usuario.id %}
                 <a href="{% url 'servicio:viasdecomunicacion_editar' obra.id %}"><i class="bi bi-pencil-fill"></i></a>
