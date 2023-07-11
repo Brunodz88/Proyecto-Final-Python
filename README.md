@@ -17,13 +17,37 @@ Los usuarios pueden realizar las siguientes accciones:
 
 - Publicar trabajos en servicios profesionales, donde pueden describir sus experiencias laborales en el rubro.
 
-- Visualizar los servicios publicados, los cuales están distribuidos en las secciones "Obras civiles", "Vias de Comunicación", "Obras hidráulias".
+- Visualizar los servicios publicados, los cuales están distribuidos en las secciones "Obras civiles", "Vias de Comunicación", "Obras hidráulias". Algunas de las obras que podrian incluirse pueden ser:
+
+Proyectos de obras civiles
+
+•	Estructuras de hormigón armado y pretensado.
+•	Estructuras metálicas.
+•	Estructuras Especiales (Puentes, Torres, Arcos, etc).
+•	Estudio de suelos e ingeniería de Fundaciones.
+
+Proyecto de obras hidráulicas y/o de control de erosión
+
+•	Modelación hidrológica e hidráulica (HEC-HMS, HEC-RAS, SWMM).
+•	Obras de regulación (azud, pequeñas y grandes presas).
+•	Obras de Riego (canales, partidores de caudales, desarenadores, saltos).
+•	Desagües pluviales. 
+•	Alcantarillas y Acueductos.
+•	Ingeniería Sanitaria (redes de agua y cloaca, plantas de potabilización y de saneamiento).
+
+Proyectos de vías de comunicación
+
+•	Infraestructuras viales.
+•	Infraestructuras ferroviarias.
+•	Infraestructuras portuarias.
+•	Logística en el trasporte.
+
 
 - Comentar las publicaciones.
 
-- Editar el perfil de Usuario.
+- Editar el perfil de usuario.
 
-- Cambiar la contraseña de Usuario.
+- Cambiar la contraseña de usuario.
 
 - Cerrar Sesión.
 
