@@ -16,9 +16,9 @@
             {% for obra in viasdecomunicacion %}
             <div class="col-sm-6 align-items-center">
                 <div class="card-body">
-                <img src="{{obra.ImagenObra.url}}" class="" width="100px">
+                <img src="{{obra.ImagenObra.url}}" class="" width="300px">
                 {{bajo.titulo}}
-                <a href="{% url 'servicio:viasdecomunicacion' obra.id %}"><i class="bi bi-eye"></i></a>
+                <a href="{% url 'servicio:viasdecomunicacion_detalle' obra.id %}"><i class="bi bi-eye"></i></a>
                 {% if user.id == obra.usuario.id %}
                 <a href="{% url 'servicio:viasdecomunicacion_editar' obra.id %}"><i class="bi bi-pencil-fill"></i></a>
                 <a href="{% url 'servicio:viasdecomunicacion_eliminar' obra.id %}"><i class="bi bi-trash text-danger"></i></a>
