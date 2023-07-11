@@ -4,6 +4,8 @@
 
 <br>
 <br>
+<br>
+<br>
 
 <div class="container text-center">
     <h1> Lista de obras en Vias de Comunicación </h1>
@@ -19,7 +21,7 @@
                 <img src="{{obra.imagenObra.url}}" class="" width="300px">
                 {{obra.titulo}}
                 <a href="{% url 'servicio:viasdecomunicacion_detalle' obra.id %}"><i class="bi bi-eye"></i></a>
-                {% if user.id == obra.usuario.id %}
+                {% if id == usuario_id %}
                 <a href="{% url 'servicio:viasdecomunicacion_editar' obra.id %}"><i class="bi bi-pencil-fill"></i></a>
                 <a href="{% url 'servicio:viasdecomunicacion_eliminar' obra.id %}"><i class="bi bi-trash text-danger"></i></a>
                 <br>
