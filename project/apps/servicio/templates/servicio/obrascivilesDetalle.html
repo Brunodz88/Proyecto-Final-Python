@@ -7,15 +7,15 @@
 
 <div class="container">
 
-<p><h4>{{obrasciviles.titulo}}</h4></p>
-{% if obrasciviles.imagenInstrumento %}
-    <p><img src="{{obrasciviles.imagenObra.url}}" alt=""></p>
+<p><h4>{{obra.titulo}}</h4></p>
+{% if obra.imagenObra %}
+    <p><img src="{{obra.imagenObra.url}}" alt=""></p>
 {% endif %}
 <p>Descripción: {{obrasciviles.descripcion}}</p>
 <p>Año: {{obrasciviles.year}}</p>
 <p>Valor (US$): {{obrasciviles.precio}}</p>
 <p>Teléfono de Contacto: {{obrasciviles.telefonoContacto}}</p>
-<p>Email de Contacto: {{obrasciviles.emailContacto}}</p>
+<p>Email de Contacto: {{obraciviles.emailContacto}}</p>
 
 </div>
 <br>

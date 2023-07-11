@@ -26,7 +26,7 @@
     {% if not obrashidraulicas.comentarios.all %}
         No han comentado este proyecto
     {% else %}
-        {% for comentario in bajo.comentarios.all %}
+        {% for comentario in obrashidraulicas.comentarios.all %}
         <p><strong>{{comentario.nombre}}</strong></p>
         <p>{{comentario.mensaje}}</p>
         <p><small>{{comentario.fechaComentario}}</small></p>
