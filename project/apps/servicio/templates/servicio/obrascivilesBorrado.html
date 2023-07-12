@@ -17,13 +17,13 @@
 <div class="container text-center">
 
     <form method="post">{% csrf_token %}
-    ¿ Estás seguro que deseas borrar esta obra civil ?
-    <p>
-        <button type="submit" class="btn btn-danger">Eliminar</button>
-    </p>
+        <h4>¿ Estás seguro/a que deseas borrar esta obra civil? ? </h4>
+        <p>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </p>
     </form>
-</div>
-
+    
+    </div>
 {% else %}
 <div class="container">
     <h4>No tienes acceso a esta pagina!</h4>
