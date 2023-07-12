@@ -51,7 +51,7 @@ class ObrascivilesDelete(LoginRequiredMixin, DeleteView):
     template_name = "servicio/obrascivilesBorrado.html"
 
 
-# OBRAS HIDRAULICAS
+# OBRAS HIDRÁULICAS
 
 
 class ObrashidraulicasLista(LoginRequiredMixin, ListView):

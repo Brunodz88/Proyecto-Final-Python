@@ -16,8 +16,8 @@ class FormularioNuevaObra(forms.ModelForm):
             "descripcion": forms.Textarea(attrs={"class": "form-control"}),
             "year": forms.TextInput(attrs={"class": "form-control"}),
             "precio": forms.TextInput(attrs={"class": "form-control"}),
-            "telefonoContacto": forms.TextInput(attrs={"class": "form-control"}),
-            "emailContacto": forms.TextInput(attrs={"class": "form-control"}),
+            "telefono Contacto": forms.TextInput(attrs={"class": "form-control"}),
+            "email Contacto": forms.TextInput(attrs={"class": "form-control"}),
         }
 
 
@@ -32,7 +32,7 @@ class ActualizacionObra(forms.ModelForm):
             "descripcion": forms.Textarea(attrs={"class": "form-control"}),
             "year": forms.TextInput(attrs={"class": "form-control"}),
             "precio": forms.TextInput(attrs={"class": "form-control"}),
-            "telefonoContacto": forms.TextInput(attrs={"class": "form-control"}),
+            "telefono de Contacto": forms.TextInput(attrs={"class": "form-control"}),
             "emailContacto": forms.TextInput(attrs={"class": "form-control"}),
         }
 
