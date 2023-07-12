@@ -9,29 +9,28 @@
 
 <div class="container">
 
-    <h4>Editar la obra hidráulica creada?</h4>
+    <h4> ¿ Desea Editar esta obra hidráulica? </h4>
     
 </div>
 
 <div class="container">
     <div class="form-group">
         <form method="post" enctype="multipart/form-data">{% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Guardar</button>
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Guardar</button>
         </form>
     </div>    
 </div>
-<br>
 {% else %}
 <div class="container">
-    <P>
+<P>
 
-    </P>
-    <P> 
-    
-    </P>
-    
-    <h4>No tienes acceso a esta pagina!</h4>
+</P>
+<P> 
+
+</P>
+
+<h4>No tienes acceso a esta pagina!</h4>
 </div>
 {% endif %}
 
