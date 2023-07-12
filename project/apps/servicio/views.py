@@ -70,7 +70,7 @@ class ObrashidraulicasUpdate(LoginRequiredMixin, UpdateView):
     model = Obra
     form_class = ActualizacionObra
     success_url = reverse_lazy("home:index")
-    context_object_name = "Obrashidraulicas"
+    context_object_name = "obrashidraulicas"
     template_name = "servicio/obrashidraulicasEdicion.html"
 
 
